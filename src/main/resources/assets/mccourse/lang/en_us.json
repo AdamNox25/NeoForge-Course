@@ -5,8 +5,26 @@
   "item.mccourse.tomato": "Tomato",
   "item.mccourse.frostfire_ice": "Frostfire Ice",
 
+  "item.mccourse.black_opal_sword": "Black Opal Sword",
+  "item.mccourse.black_opal_pickaxe": "Black Opal Pickaxe",
+  "item.mccourse.black_opal_shovel": "Black Opal Shovel",
+  "item.mccourse.black_opal_axe": "Black Opal Axe",
+  "item.mccourse.black_opal_hoe": "Black Opal Hoe",
+
+  "item.mccourse.black_opal_paxel": "Black Opal Paxel",
+  "item.mccourse.black_opal_hammer": "Black Opal Hammer",
+
+  "item.mccourse.black_opal_helmet": "Black Opal Helmet",
+  "item.mccourse.black_opal_chestplate": "Black Opal Chestplate",
+  "item.mccourse.black_opal_leggings": "Black Opal Leggings",
+  "item.mccourse.black_opal_boots": "Black Opal Boots",
+
+  "item.mccourse.black_opal_horse_armor": "Black Opal Horse Armor",
+  "item.mccourse.kaupen_armor_trim_smithing_template": "Kaupen Trim Template",
+
   "block.mccourse.black_opal_block": "Block of Black Opal",
   "block.mccourse.raw_black_opal_block": "Raw Black Opal Block",
+
   "block.mccourse.black_opal_ore": "Black Opal Ore",
   "block.mccourse.black_opal_deepslate_ore": "Black Opal Deepslate Ore",
   "block.mccourse.black_opal_end_ore": "Black Opal End Ore",
@@ -32,5 +50,8 @@
   "tooltip.mccourse.tomato.1": "Tomato; Tomato",
 
   "itemGroup.mccourse.black_opal_items_tab": "Black Opal Items",
-  "itemGroup.mccourse.black_opal_blocks_tab": "Black Opal Blocks"
+  "itemGroup.mccourse.black_opal_blocks_tab": "Black Opal Blocks",
+
+  "trim_pattern.mccourse.kaupen": "Kaupen Armor Trim",
+  "trim_material.mccourse.black_opal": "Black Opal Material"
 }

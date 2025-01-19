@@ -6,6 +6,8 @@ import net.adamnox.mccourse.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -55,5 +57,84 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
         trapdoorBuilder(ModBlocks.BLACK_OPAL_TRAPDOOR.get(), Ingredient.of(ModItems.BLACK_OPAL.get())).group("black_opal")
                 .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLACK_OPAL_SWORD.get())
+                .pattern(" B ")
+                .pattern(" B ")
+                .pattern(" S ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_block_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACK_OPAL_PICKAXE.get())
+                .pattern("BBB")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_block_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACK_OPAL_SHOVEL.get())
+                .pattern(" B ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_block_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACK_OPAL_AXE.get())
+                .pattern(" BB")
+                .pattern(" SB")
+                .pattern(" S ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_block_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACK_OPAL_HOE.get())
+                .pattern("BB ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_block_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACK_OPAL_PAXEL.get())
+                .pattern("AHP")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('P', ModItems.BLACK_OPAL_PICKAXE.get())
+                .define('A', ModItems.BLACK_OPAL_AXE.get())
+                .define('H', ModItems.BLACK_OPAL_SHOVEL.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_block_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACK_OPAL_HAMMER.get())
+                .pattern(" BS")
+                .pattern(" SB")
+                .pattern("S  ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_block_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_HELMET.get())
+                .pattern("BBB")
+                .pattern("B B")
+                .pattern("   ")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .unlockedBy("has_block_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_CHESTPLATE.get())
+                .pattern("B B")
+                .pattern("BBB")
+                .pattern("BBB")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .unlockedBy("has_block_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_LEGGINGS.get())
+                .pattern("BBB")
+                .pattern("B B")
+                .pattern("B B")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .unlockedBy("has_block_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_BOOTS.get())
+                .pattern("   ")
+                .pattern("B B")
+                .pattern("B B")
+                .define('B', ModItems.BLACK_OPAL.get())
+                .unlockedBy("has_block_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+
+        trimSmithing(recipeOutput, ModItems.KAUPEN_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(MCCourseMod.MOD_ID, "kaupen"));
     }
 }

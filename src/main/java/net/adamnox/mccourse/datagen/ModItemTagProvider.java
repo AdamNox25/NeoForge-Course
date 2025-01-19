@@ -6,6 +6,7 @@ import net.adamnox.mccourse.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -26,5 +27,17 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.COAL)
                 .add(Items.DANDELION)
                 .add(Items.COMPASS);
+
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.BLACK_OPAL_HELMET.get())
+                .add(ModItems.BLACK_OPAL_CHESTPLATE.get())
+                .add(ModItems.BLACK_OPAL_LEGGINGS.get())
+                .add(ModItems.BLACK_OPAL_BOOTS.get());
+
+        this.tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.BLACK_OPAL.get());
+
+        this.tag(ItemTags.TRIM_TEMPLATES)
+                .add(ModItems.KAUPEN_SMITHING_TEMPLATE.get());
     }
 }

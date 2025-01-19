@@ -1,6 +1,7 @@
 package net.adamnox.mccourse;
 
 import net.adamnox.mccourse.block.ModBlocks;
+import net.adamnox.mccourse.item.ModArmorMaterials;
 import net.adamnox.mccourse.item.ModCreativeModeTabs;
 import net.adamnox.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -42,6 +43,8 @@ public class MCCourseMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModArmorMaterials.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
